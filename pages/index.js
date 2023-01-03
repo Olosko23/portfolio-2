@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import {useState} from 'react';
+import { Link } from 'react-scroll';
 import { Inter } from '@next/font/google'
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillTwitterCircle,AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
@@ -70,27 +71,31 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-600">
+      <main className="bg-[#FEFBF3] px-10 md:px-20 lg:px-40 dark:bg-[#557571]">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl">Developed By Olosko</h1>
+            <h1 className="text-xl sm:text-2xl font-medium">Developed By Olosko</h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl" />
               </li>
-              <li><a className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"href="/">Resume</a></li>
+              <li><a className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" 
+              href="Resume.pdf" download="download" target="_blank" rel="noreferrer">
+                Resume
+                </a>
+              </li>
             </ul>
           </nav>
           <div className="text-center p-10">
-            <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">Collins Olosko</h2>
+            <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">Collins George</h2>
             <h3 className="text-2xl py-2 md:text-3xl">Full Stack Developer</h3>
-            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto">Developer providing services for programming needs
+            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto">Developer providing services for programming needs<br />
               Join me down below and let's get cracking</p>
           </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-          <a href="/"><AiFillTwitterCircle /></a>
-          <a href="/"><AiFillLinkedin/></a>
-          <a href="/"><AiFillGithub/></a>
+          <a href="https://twitter.com/olos_ko_lins"><AiFillTwitterCircle /></a>
+          <a href="https://www.linkedin.com/in/collins-oloo-2646bb1a6/"><AiFillLinkedin/></a>
+          <a href="https://github.com/Olosko23"><AiFillGithub/></a>
         </div>
         <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
           <Image src={collins}/>
@@ -109,7 +114,6 @@ export default function Home() {
           </div>
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              /**pictures should go here */
               <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
               <p className="py-2">Creating elegant designs suited for your needs following your design theory</p>
               <h4 className="py-4 text-teal-600">Design tools I use</h4>
@@ -118,22 +122,20 @@ export default function Home() {
               <p className="text-gray-800 py-1">Figma</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              /**pictures should go here */
               <h3 className="text-lg font-medium pt-8 pb-2">Code</h3>
-              <p className="py-2">Creating elegant designs suited for your needs following your design theory</p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Figma</p>
+              <p className="py-2">Creating elegant software suited for your needs following your design theory</p>
+              <h4 className="py-4 text-teal-600">I develop the following</h4>
+              <p className="text-gray-800 py-1">Web Apps</p>
+              <p className="text-gray-800 py-1">Mobile Apps</p>
+              <p className="text-gray-800 py-1">API's</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              /**pictures should go here */
               <h3 className="text-lg font-medium pt-8 pb-2">Consulting</h3>
-              <p className="py-2">Creating elegant designs suited for your needs following your design theory</p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Figma</p>
+              <p className="py-2">Collaboratin with the industries best to continue developing the new generation of developers</p>
+              <h4 className="py-4 text-teal-600">Available on the following platforms</h4>
+              <p className="text-gray-800 py-1">Disscord</p>
+              <p className="text-gray-800 py-1">Telegram</p>
+              <p className="text-gray-800 py-1">YouTube</p>
             </div>
           </div>
         </section>
@@ -145,7 +147,7 @@ export default function Home() {
               and collaborated with talented people to create digital products for both business and consumer use. 
             </p>
             <p className="text-md py-2 leading-8 text-gray-800">
-              I offer from a wide range of services, including brand design, programming and teaching
+              I have experience using the following technologies to build the future
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 py-10">
@@ -168,7 +170,7 @@ export default function Home() {
                     <input type="email" name="email" placeholder="Enter Your Email" className="p-2 bg-transparent border-2 rounded-md
                     text-white focus:outline-none my-4"/>
                     <textarea name="message" rows="10"placeholder="Enter Your Message" className="p-2 bg-transparent border-2 rounded-md focus:outlined-none"/>
-                    <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto
+                    <button className="text-white bg-gradient-to-b from-cyan-500 to-teal-500 px-6 py-3 my-8 mx-auto
                     flex items-center rounded-md hover:scale-110 duration-300"> Let's Talk</button>
                 </form>
             </div>
