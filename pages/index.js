@@ -6,6 +6,7 @@ import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillTwitterCircle,AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
 import Image from 'next/image';
 import collins from '../public/HeroImage.jpeg';
+import collins2 from '../public/newImage.jpg';
 import web2 from '../public/CSS.png';
 import web8 from '../public/GitHub.png';
 import web7 from '../public/graphql.png';
@@ -74,7 +75,7 @@ export default function Home() {
       <main className="bg-[#FEFBF3] px-10 md:px-20 lg:px-40 dark:bg-[#557571]">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl sm:text-2xl font-medium">Developed By Olosko</h1>
+            <h1 className="text-xl sm:text-2xl font-medium">Developed By Collins</h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl" />
@@ -93,12 +94,12 @@ export default function Home() {
               Join me down below and let's get cracking</p>
           </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-          <a href="https://twitter.com/olos_ko_lins"><AiFillTwitterCircle /></a>
-          <a href="https://www.linkedin.com/in/collins-oloo-2646bb1a6/"><AiFillLinkedin/></a>
-          <a href="https://github.com/Olosko23"><AiFillGithub/></a>
+          <a className="hover:bg-[#1DA1F2]" href="https://twitter.com/olos_ko_lins"><AiFillTwitterCircle /></a>
+          <a className="hover:bg-[#0072b1]" href="https://www.linkedin.com/in/collins-oloo-2646bb1a6/"><AiFillLinkedin/></a>
+          <a className="hover:bg-[#171515]" href="https://github.com/Olosko23"><AiFillGithub/></a>
         </div>
         <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-          <Image src={collins}/>
+          <Image src={collins2}/>
         </div>
         </section>
         <section className="">
